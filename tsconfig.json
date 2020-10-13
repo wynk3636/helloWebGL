@@ -1,9 +1,15 @@
 {
     "compilerOptions":{
-        "target":"es5"
+        "target":"es5",
+        "moduleResolution": "node"
     },
+    /*
     "files":[
         "index.ts"
+    ],
+    */
+    "include": [
+        "src/**/*"
     ],
     "typedocOptions":{
         "name":"test_npm",

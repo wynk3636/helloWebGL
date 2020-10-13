@@ -6,7 +6,7 @@ module.exports = (env,argv) => {
         mode: "production",
         //エントリーポイントの設定
         entry: {
-            index:path.join(__dirname,"index.ts"),
+            index:path.join(__dirname, "src" , "index.ts"),
         },
         //出力先の設定
         output:{
@@ -26,6 +26,13 @@ module.exports = (env,argv) => {
                         }
                     ]
                 }
+            ]
+        },
+        //モジュールパス解決設定
+        resolve:{
+            extensions:[".ts",".js"],
+            modules:[
+                "node_modules"
             ]
         },
         //dev-serverの設定
